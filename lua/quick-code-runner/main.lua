@@ -26,11 +26,7 @@ local function run_lines(lines, opts)
   -- Add the temporary file to the arguments
   local cmd = _QUICK_CODE_RUNNER_CONFIG.file_types[filetype]
   if not cmd then
-    vim.notify(
-      'No command for filetype ' .. filetype,
-      vim.log.levels.WARN,
-      { title = 'quick-code-runner.nvim' }
-    )
+    vim.notify('No command found for filetype: ' .. filetype, vim.log.levels.WARN, { title = 'quick-code-runner.nvim' })
     return
   end
 
