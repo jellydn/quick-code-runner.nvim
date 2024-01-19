@@ -75,7 +75,7 @@ util.create_cmd = function(cmd, func, opt)
 end
 
 --- Show output in a split view
----@param output string The output to display
+---@param output string|nil The output to display
 util.show_output_in_split = function(output)
   -- mount/open the component
   popup:mount()
