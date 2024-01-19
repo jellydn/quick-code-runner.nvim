@@ -1,5 +1,41 @@
 local util = {}
 
+--- Show output in a split view
+---@param output string|nil The output to display
+util.show_output_in_split = function(output)
+  local Popup = require('nui.popup')
+  local event = require('nui.utils.autocmd').event
+
+  local popup = Popup({
+    enter = true,
+    focusable = true,
+    border = {
+      style = 'rounded',
+    },
+    position = '50%',
+    size = {
+      width = '50%',
+      height = '50%',
+    },
+  })
+
+  -- mount/open the component
+  popup:mount()
+
+  -- unmount component when cursor leaves buffer
+  popup:on(event.BufLeave, function()
+    popup:unmount()
+  end)
+
+  local content = output
+  -- Fallback to empty string if output is nil
+  if not content or #content == 0 then
+    content = 'No output'
+  end
+
+  vim.api.nvim_buf_set_lines(popup.bufnr, 0, 1, false, vim.split(content, '\n'))
+end
+
 --- Get visual selection
 ---@return string[]
 util.get_visual_selection = function()
