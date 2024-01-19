@@ -61,8 +61,8 @@ end
 --- Show output in a split view
 ---@param output string|nil The output to display
 util.show_output_in_split = function(output)
-  local Popup = require('nui.popup')
-  local event = require('nui.utils.autocmd').event
+  
+  
 
   local popup = Popup({
     enter = true,
@@ -77,10 +77,10 @@ util.show_output_in_split = function(output)
     },
   })
 
-  -- mount/open the component
+  
   popup:mount()
 
-  -- unmount component when cursor leaves buffer
+  
   popup:on(event.BufLeave, function()
     popup:unmount()
   end)
