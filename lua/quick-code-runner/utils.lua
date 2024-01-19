@@ -33,7 +33,6 @@ util.create_tmp_file = function(content, filetype)
     vim.notify('quick-code-runner: failed to create tmp file', vim.log.levels.ERROR)
     return
   end
-
   local f = io.open(tmp_file, 'w')
   if not f then
     return
