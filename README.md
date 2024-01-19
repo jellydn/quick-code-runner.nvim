@@ -22,7 +22,7 @@ To use quick-code-runner.nvim, add the following configuration to your Neovim se
         "<leader>cr",
         ":QuickCodeRunner<CR>",
         desc = "Quick Code Runner",
-        mode = { "v" },
+        mode = "v",
       },
     },
   }
