@@ -74,7 +74,7 @@ local function run_selection(opts)
   local lines = utils.get_visual_selection()
   if not lines then
     return
-  end
+end
 
   run_lines(lines, opts)
 end
