@@ -1,12 +1,13 @@
 -- -- log.lua
 --
--- Inspired by rxi/log.lua
+-- vlog.lua - Logging functionality
+requires('vlog')
 -- Modified by tjdevries and can be found at github.com/tjdevries/vlog.nvim
 --
 -- This library is free software; you can redistribute it and/or modify it
 -- under the terms of the MIT license. See LICENSE for details.
 
--- User configuration section
+-- vlog.lua - User configuration section
 local default_config = {
   -- Name of the plugin. Prepended to log messages
   plugin = 'quick-code-runner.nvim',
@@ -17,7 +18,7 @@ local default_config = {
   -- Should highlighting be used in console (using echohl)
   highlights = true,
 
-  -- Should write to a file
+  -- Logging file functionality
   use_file = true,
 
   -- Any messages above this level will be logged.
@@ -51,7 +52,7 @@ log.new = function(config, standalone)
 
   local outfile = log.get_log_file()
 
-  local obj
+  local obj = log
   if standalone then
     obj = log
   else
@@ -119,7 +120,7 @@ log.new = function(config, standalone)
 
     -- Output to log file
     if config.use_file then
-      local fp = io.open(outfile, 'a')
+      -- Open log file
       local str = string.format('[%-6s%s] %s: %s\n', nameupper, os.date(), lineinfo, msg)
       fp:write(str)
       fp:close()
@@ -148,4 +149,4 @@ end
 log.new(default_config, true)
 -- }}}
 --
-return log
+
