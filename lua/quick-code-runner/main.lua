@@ -42,8 +42,8 @@ local function run_lines(lines, opts)
   end
 
   -- Run command
-  local cli = table.concat(cmd, ' ') .. ' ' .. fname
-  local output = vim.fn.system(cli)
+  local commandLine = table.concat(cmd, ' ') .. ' ' .. fname
+  local output = vim.fn.system(commandLine)
   if vim.v.shell_error ~= 0 then
     vim.notify('quick-code-runner: command failed with error: ' .. output, vim.log.levels.ERROR)
   else
@@ -74,7 +74,7 @@ end
 
 function M.setup()
   log.info('quick-code-runner: setup')
-  utils.create_cmd('QuickCodeRunner', function(opts)
+  utils.create_cmd('QuickCodeRunner', function(opts
     if opts.range ~= 0 then
       run_selection(opts.fargs)
     else
