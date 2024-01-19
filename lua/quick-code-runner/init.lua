@@ -8,6 +8,9 @@ local default_config = {
     python = {
       'python3 -u',
     },
+    go = {
+      'go run',
+    },
   },
 }
 --- Global configuration for entire plugin, easy to access from anywhere

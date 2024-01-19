@@ -42,6 +42,9 @@ local default_config = {
     python = {
       'python3 -u', -- Run command for python
     },
+    go = {
+      "go run",
+    },
   },
 }
 ```
@@ -54,7 +57,7 @@ Simple and user-friendly: choose your code snippet and invoke "QuickCodeRunner" 
 
 ## Limitations
 
-Kindly be aware that quick-code-runner.nvim is presently configured to run only JavaScript (JS), TypeScript (TS), and Python at this time. Although it might function with other languages, we can't assure full compatibility or offer assistance for problems encountered when employing languages other than JS, TS, and Python.
+Kindly be aware that quick-code-runner.nvim is presently configured to run only JavaScript (JS), TypeScript (TS), Go and Python at this time. Although it might function with other languages, we can't assure full compatibility or offer assistance for problems encountered when employing languages other than JS, TS, Go and Python.
 
 ## Contributing
 

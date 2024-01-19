@@ -7,6 +7,7 @@ local filetype_to_extension = {
   javascript = 'js',
   typescript = 'ts',
   python = 'py',
+  go = 'go',
 }
 
 --- Create a temporary file with the lines to run
@@ -34,18 +35,24 @@ local function run_lines(lines, opts)
       vim.log.levels.WARN,
       { title = 'quick-code-runner.nvim' }
     )
+    if _QUICK_CODE_RUNNER_CONFIG.debug then
+      log.warn('quick-code-runner: No command for filetype ' .. filetype)
+    end
     return
-  end
-
-  if _QUICK_CODE_RUNNER_CONFIG.debug then
-    log.info('quick-code-runner: run ' .. vim.inspect(cmd))
   end
 
   -- Run command
   local cli = table.concat(cmd, ' ') .. ' ' .. fname
+  if _QUICK_CODE_RUNNER_CONFIG.debug then
+    log.info(cli)
+  end
+
   local output = vim.fn.system(cli)
   if vim.v.shell_error ~= 0 then
     vim.notify('quick-code-runner: command failed with error: ' .. output, vim.log.levels.ERROR)
+    if _QUICK_CODE_RUNNER_CONFIG.debug then
+      log.error('quick-code-runner: command failed with error: ' .. output)
+    end
   else
     utils.show_output_in_split(output)
   end
@@ -73,7 +80,6 @@ local function run_selection(opts)
 end
 
 function M.setup()
-  log.info('quick-code-runner: setup')
   utils.create_cmd('QuickCodeRunner', function(opts)
     if opts.range ~= 0 then
       run_selection(opts.fargs)
