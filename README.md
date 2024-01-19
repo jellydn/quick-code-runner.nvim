@@ -65,7 +65,6 @@ Inspired by [code_runner.nvim](https://github.com/CRAG666/code_runner.nvim) but 
 - Github: [@jellydn](https://github.com/jellydn)
 
 ## Show your support
-
 If this guide has been helpful, please give it a ⭐️.
 
 [![kofi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/dunghd)
