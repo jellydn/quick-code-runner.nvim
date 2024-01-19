@@ -62,8 +62,9 @@ local function run_lines(lines, opts)
   end
 
   -- Clean up the temporary file after a delay
-  local timeout = 1000
+  local timeout = 2000
   vim.defer_fn(function()
+    if success then
     local success = os.remove(fname)
     if not success then
       vim.notify('quick-code-runner: remove file failed', vim.log.levels.WARN)
