@@ -49,7 +49,7 @@ local function run_lines(lines, opts)
 
   log.info('quick-code-runner: run ' .. vim.inspect(cmd))
   -- Run command
-  local cli = table.concat(cmd, ' ') .. ' ' .. fname
+  local cli = table.concat(cmd, ' ') .. ' <additional arguments> ' .. fname
   local output = vim.fn.system(cli)
   vim.notify('quick-code-runner: ' .. ' ' .. cli, vim.log.levels.INFO)
   if vim.v.shell_error ~= 0 then
