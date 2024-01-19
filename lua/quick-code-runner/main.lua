@@ -48,7 +48,8 @@ local function run_lines(lines, opts)
   local timeout = 1000
   vim.defer_fn(function()
     local success = os.remove(fname)
-    if not success then
+    local success, err = os.remove(fname)
+\1if err then\1  vim.notify('quick-code-runner: remove file failed: ' .. err, vim.log.levels.WARN)
       vim.notify('quick-code-runner: remove file failed', vim.log.levels.WARN)
     else
       if _QUICK_CODE_RUNNER_CONFIG.debug then
