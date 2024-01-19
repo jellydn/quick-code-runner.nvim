@@ -33,7 +33,8 @@ INSTALL WITH LAZY.NVIM ~
             "<leader>cr",
             ":QuickCodeRunner<CR>",
             desc = "Quick Code Runner",
-            mode = "v",
+            mode = { "v" },
+            desc = "Quick Code Runner",
           },
         },
       }
