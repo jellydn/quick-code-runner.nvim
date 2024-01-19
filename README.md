@@ -19,10 +19,10 @@ To use quick-code-runner.nvim, add the following configuration to your Neovim se
     cmd = "QuickCodeRunner",
     keys = {
       {
-        "<leader>qr",
+        "<leader>cr",
         ":QuickCodeRunner<CR>",
         desc = "Quick Code Runner",
-        mode = { "n", "v" },
+        mode = { "v" },
       },
     },
   }
@@ -48,7 +48,7 @@ local default_config = {
 
 ## Demo
 
-Simple and user-friendly: choose your code snippet and invoke "QuickCodeRunner" by pressing `<leader>q r`, alternatively.
+Simple and user-friendly: choose your code snippet and invoke "QuickCodeRunner" by pressing `<leader>cr`, alternatively.
 
 [![Demo](https://i.gyazo.com/f9c040fda15afa2368c8bedd2ee0dc78.gif)](https://gyazo.com/f9c040fda15afa2368c8bedd2ee0dc78)
 
