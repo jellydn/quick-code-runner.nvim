@@ -32,6 +32,13 @@ local function run_lines(lines, opts)
   -- Add the temporary file to the arguments
   local cmd = _QUICK_CODE_RUNNER_CONFIG.file_types[filetype]
   if not cmd then
+    -- Add command for filetype
+    if filetype == 'python' then
+      cmd = {'python3'}
+    elseif filetype == 'javascript' then
+      cmd = {'node'}
+    -- Add other file types as needed
+    end
     vim.notify(
       'No command for filetype ' .. filetype,
       vim.log.levels.WARN,
