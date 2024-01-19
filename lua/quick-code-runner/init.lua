@@ -1,4 +1,3 @@
-local utils = require('quick-code-runner.utils')
 --- Default configuration for quick-code-runner.nvim
 local default_config = {
   debug = false,
