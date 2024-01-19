@@ -18,11 +18,12 @@ local function run_lines(lines, opts)
   local extension = filetype_to_extension[filetype]
   local fname = utils.create_tmp_file(lines, extension)
   if not fname then
-    vim.notify(
-      'Create tmp file failed. Please try again!',
-      vim.log.levels.WARN,
-      { title = 'quick-code-runner.nvim' }
-    )
+  vim.notify(
+    'Create tmp file failed. Please try again!',
+    vim.log.levels.WARN,
+    { title = 'quick-code-runner.nvim' }
+  )
+  return
     return
   end
 
@@ -34,6 +35,7 @@ local function run_lines(lines, opts)
       vim.log.levels.WARN,
       { title = 'quick-code-runner.nvim' }
     )
+  return
     return
   end
 
@@ -71,6 +73,7 @@ local function run_selection(opts)
   opts = opts or {}
   local lines = utils.get_visual_selection()
   if not lines then
+    vim.notify('No selection', vim.log.levels.WARN, { title = 'quick-code-runner.nvim' })
     return
   end
 
@@ -89,3 +92,6 @@ function M.setup()
 end
 
 return M
+return M
+local utils = require('quick-code-runner.utils')
+local log = require('quick-code-runner.vlog')
