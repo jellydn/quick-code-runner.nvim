@@ -55,7 +55,7 @@ configuration:
         python = {
           'python3 -u', -- Run command for python
         },
-        go = {
+go = {
           "go run",
         },
       },
