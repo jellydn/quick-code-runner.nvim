@@ -79,7 +79,7 @@ by pressing `<leader>cr`, alternatively.
 LIMITATIONS                               *quick-code-runner.nvim-limitations*
 
 Kindly be aware that quick-code-runner.nvim is presently configured to run only
-JavaScript (JS), TypeScript (TS), Go and Python at this time. Although it might
+JavaScript (JS), TypeScript (TS), Go, and Python at this time. Although it might
 function with other languages, we can’t assure full compatibility or offer
 assistance for problems encountered when employing languages other than JS, TS,
 Go and Python.
