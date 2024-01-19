@@ -6,6 +6,8 @@ Table of Contents                   *quick-code-runner.nvim-table-of-contents*
   - Usage                                       |quick-code-runner.nvim-usage|
   - Configuration                       |quick-code-runner.nvim-configuration|
   - Demo                                         |quick-code-runner.nvim-demo|
+  - Limitations                           |quick-code-runner.nvim-limitations|
+  - Contributing                         |quick-code-runner.nvim-contributing|
   - Credits                                   |quick-code-runner.nvim-credits|
   - Author                                     |quick-code-runner.nvim-author|
   - Show your support               |quick-code-runner.nvim-show-your-support|
@@ -66,10 +68,31 @@ by pressing `<leader>cr`, alternatively.
 <https://gyazo.com/f9c040fda15afa2368c8bedd2ee0dc78>
 
 
+LIMITATIONS                               *quick-code-runner.nvim-limitations*
+
+Kindly be aware that quick-code-runner.nvim is presently configured to run only
+JavaScript (JS), TypeScript (TS), and Python at this time. Although it might
+function with other languages, we can’t assure full compatibility or offer
+assistance for problems encountered when employing languages other than JS, TS,
+and Python.
+
+
+CONTRIBUTING                             *quick-code-runner.nvim-contributing*
+
+If you wish to support more languages, feel free to open a Pull Request. We
+appreciate any contributions to expand the capabilities of
+quick-code-runner.nvim.
+
+Alternatively, if you need to run code in a language not currently supported by
+quick-code-runner.nvim, you may consider using code_runner.nvim
+<https://github.com/CRAG666/code_runner.nvim>.
+
+
 CREDITS                                       *quick-code-runner.nvim-credits*
 
-Inspired by code_runner.nvim <https://github.com/CRAG666/code_runner.nvim> but
-with simple and efficient.
+Drawing inspiration from the feature-rich code_runner.nvim
+<https://github.com/CRAG666/code_runner.nvim>, I aim to create a more simple
+and efficient alternative.
 
 
 AUTHOR                                         *quick-code-runner.nvim-author*
