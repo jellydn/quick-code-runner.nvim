@@ -3,7 +3,7 @@ local log = require('quick-code-runner.vlog')
 
 local M = {}
 
-local filetype_to_extension = {
+local filetype_to_extension={
   javascript = 'js',
   typescript = 'ts',
   python = 'py',
