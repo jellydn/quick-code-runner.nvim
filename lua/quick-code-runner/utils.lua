@@ -1,19 +1,3 @@
-local Popup = require('nui.popup')
-local event = require('nui.utils.autocmd').event
-
-local popup = Popup({
-  enter = true,
-  focusable = true,
-  border = {
-    style = 'rounded',
-  },
-  position = '50%',
-  size = {
-    width = '50%',
-    height = '50%',
-  },
-})
-
 local util = {}
 
 --- Get visual selection
@@ -77,6 +61,22 @@ end
 --- Show output in a split view
 ---@param output string|nil The output to display
 util.show_output_in_split = function(output)
+  local Popup = require('nui.popup')
+  local event = require('nui.utils.autocmd').event
+
+  local popup = Popup({
+    enter = true,
+    focusable = true,
+    border = {
+      style = 'rounded',
+    },
+    position = '50%',
+    size = {
+      width = '50%',
+      height = '50%',
+    },
+  })
+
   -- mount/open the component
   popup:mount()
 
