@@ -33,7 +33,7 @@ INSTALL WITH LAZY.NVIM ~
             "<leader>cr",
             ":QuickCodeRunner<CR>",
             desc = "Quick Code Runner",
-            mode = "v",
+            mode = { "v" },
           },
         },
       }
@@ -53,7 +53,7 @@ configuration:
         javascript = { 'bun run' }, -- Run command for javascript, you can change to `node` or `deno`
         typescript = { 'bun run' }, -- Run command for typescript, you can change to `npx tsx run` or `deno`
         python = {
-          'python3 -u', -- Run command for python
+          { 'python3 -u' }, -- Run command for python
         },
       },
     }
