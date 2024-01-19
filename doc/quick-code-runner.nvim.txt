@@ -43,10 +43,15 @@ INSTALL WITH LAZY.NVIM ~
 CONFIGURATION                           *quick-code-runner.nvim-configuration*
 
 You can customize quick-code-runner.nvim by modifying the default
-configuration:
+configuration: -- Configuration for quick-code-runner.nvim
+
+    ---[====[
+  Default configuration for quick-code-runner.nvim
+  ]====]
 
 >lua
     --- Default configuration for quick-code-runner.nvim
+  -- Run command for Go
     local default_config = {
       debug = false, -- Print debug information
       file_types = {
