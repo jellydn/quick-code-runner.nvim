@@ -52,9 +52,19 @@ Simple and user-friendly: choose your code snippet and invoke "QuickCodeRunner" 
 
 [![Demo](https://i.gyazo.com/f9c040fda15afa2368c8bedd2ee0dc78.gif)](https://gyazo.com/f9c040fda15afa2368c8bedd2ee0dc78)
 
+## Limitations
+
+Kindly be aware that quick-code-runner.nvim is presently configured to run only JavaScript (JS), TypeScript (TS), and Python at this time. Although it might function with other languages, we can't assure full compatibility or offer assistance for problems encountered when employing languages other than JS, TS, and Python.
+
+## Contributing
+
+If you wish to support more languages, feel free to open a Pull Request. We appreciate any contributions to expand the capabilities of quick-code-runner.nvim.
+
+Alternatively, if you need to run code in a language not currently supported by quick-code-runner.nvim, you may consider using [code_runner.nvim](https://github.com/CRAG666/code_runner.nvim).
+
 ## Credits
 
-Inspired by [code_runner.nvim](https://github.com/CRAG666/code_runner.nvim) but with simple and efficient.
+Drawing inspiration from the feature-rich [code_runner.nvim](https://github.com/CRAG666/code_runner.nvim), I aim to create a more simple and efficient alternative.
 
 ## Author
 
