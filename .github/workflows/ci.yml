@@ -10,7 +10,7 @@ jobs:
       - name: Stylua
         uses: JohnnyMorganz/stylua-action@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_VIMDOC_TOKEN }}
           version: latest
           args: --check .
 
@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_VIMDOC_TOKEN }}
       - name: panvimdoc
         uses: kdheepak/panvimdoc@main
         with:
