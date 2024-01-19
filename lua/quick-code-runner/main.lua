@@ -18,6 +18,10 @@ local function run_lines(lines, opts)
   local extension = filetype_to_extension[filetype]
   local fname = utils.create_tmp_file(lines, extension)
   if not fname then
+    log.error('quick-code-runner: Create tmp file failed')
+    return
+  end
+  if not fname then
     vim.notify(
       'Create tmp file failed. Please try again!',
       vim.log.levels.WARN,
@@ -43,6 +47,7 @@ local function run_lines(lines, opts)
   local output = vim.fn.system(cli)
   vim.notify('quick-code-runner: ' .. ' ' .. cli, vim.log.levels.INFO)
   if vim.v.shell_error ~= 0 then
+    log.error('quick-code-runner: command execution failed with error: ' .. output)
     vim.notify('quick-code-runner: command failed with error: ' .. output, vim.log.levels.ERROR)
   else
     utils.show_output_in_split(output)
@@ -52,6 +57,7 @@ local function run_lines(lines, opts)
   end
 
   -- Clean up the temporary file after a delay
+  local timeout = 1000
   local timeout = 1000
   vim.defer_fn(function()
     local success = os.remove(fname)
