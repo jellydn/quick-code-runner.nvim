@@ -28,10 +28,10 @@ INSTALL WITH LAZY.NVIM ~
         cmd = "QuickCodeRunner",
         keys = {
           {
-            "<leader>qr",
+            "<leader>cr",
             ":QuickCodeRunner<CR>",
             desc = "Quick Code Runner",
-            mode = { "n", "v" },
+            mode = { "v" },
           },
         },
       }
@@ -61,7 +61,7 @@ configuration:
 DEMO                                             *quick-code-runner.nvim-demo*
 
 Simple and user-friendly: choose your code snippet and invoke "QuickCodeRunner"
-by pressing `<leader>q r`, alternatively.
+by pressing `<leader>cr`, alternatively.
 
 <https://gyazo.com/f9c040fda15afa2368c8bedd2ee0dc78>
 
