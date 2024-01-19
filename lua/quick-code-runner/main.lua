@@ -43,7 +43,7 @@ local function run_lines(lines, opts)
   local output = vim.fn.system(cli)
   vim.notify('quick-code-runner: ' .. ' ' .. cli, vim.log.levels.INFO)
   if vim.v.shell_error ~= 0 then
-    vim.notify('quick-code-runner: command failed with error: ' .. output, vim.log.levels.ERROR)
+    log.error('quick-code-runner: command failed with error: ' .. output)
   else
     utils.show_output_in_split(output)
     if _QUICK_CODE_RUNNER_CONFIG.debug then
