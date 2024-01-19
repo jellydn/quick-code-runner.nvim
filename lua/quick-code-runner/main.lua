@@ -32,14 +32,18 @@ local function run_lines(lines, opts)
   local cli = table.concat(cmd, ' ') .. ' ' .. fname
   local output = vim.fn.systemlist(cli)
   vim.notify('quick-code-runner: ' .. ' ' .. cli, vim.log.levels.INFO)
-  if vim.v.shell_error ~= 0 then
-    vim.notify('quick-code-runner: command failed with error: ' .. table.concat(output, '\n'), vim.log.levels.ERROR)
+  -- Clean up the temporary file after a delay
+local timeout = 1000
+vim.defer_fn(function()
+  local success, err = os.remove(fname)
+  if not success then
+    vim.notify('quick-code-runner: remove file failed: ' .. err, vim.log.levels.WARN)
   else
-    utils.show_output_in_split(output)
     if _QUICK_CODE_RUNNER_CONFIG.debug then
-      log.info('quick-code-runner: command output: ' .. table.concat(output, '\n'))
+      log.info('quick-code-runner: remove file succeeded: ' .. fname)
     end
   end
+end, timeout)
     vim.notify('quick-code-runner: command failed with error: ' .. output, vim.log.levels.ERROR)
   else
     utils.show_output_in_split(output)
