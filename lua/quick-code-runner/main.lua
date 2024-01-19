@@ -4,9 +4,12 @@ local log = require('quick-code-runner.vlog')
 local M = {}
 
 local filetype_to_extension = {
+  html = 'html',
   javascript = 'js',
   typescript = 'ts',
   python = 'py',
+  html = 'html',
+  css = 'css',
 }
 
 --- Create a temporary file with the lines to run
