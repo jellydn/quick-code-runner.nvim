@@ -16,8 +16,39 @@ local filetype_to_extension = {
 local function run_lines(lines, opts)
   -- Create a temporary file with the lines to run
   local filetype = vim.bo.filetype
+
+  local global_fname = _QUICK_CODE_RUNNER_CONFIG.global_files[filetype]
+  local global_lines = {}
+  if global_fname then
+    local f = io.open(global_fname, 'r')
+    if f then
+      for line in f:lines() do
+        table.insert(global_lines, line)
+      end
+      f:close()
+    else
+      -- Create the global file if it doesn't exist
+      f = io.open(global_fname, 'w')
+      if f then
+        f:close()
+      else
+        vim.notify(
+          'Could not create global file ' .. global_fname,
+          vim.log.levels.WARN,
+          { title = 'quick-code-runner.nvim' }
+        )
+        return
+      end
+    end
+  end
+
+  -- Append the lines from the selection
+  for _, line in ipairs(lines) do
+    table.insert(global_lines, line)
+  end
+
   local extension = filetype_to_extension[filetype]
-  local fname = utils.create_tmp_file(lines, extension)
+  local fname = utils.create_tmp_file(global_lines, extension)
   if not fname then
     vim.notify(
       'Create tmp file failed. Please try again!',
@@ -85,6 +116,20 @@ function M.setup()
       run_selection(opts.fargs)
     else
       vim.notify('No selection', vim.log.levels.WARN, { title = 'quick-code-runner.nvim' })
+    end
+  end, { nargs = '*', range = true })
+
+  utils.create_cmd('QuickCodePad', function()
+    local filetype = vim.bo.filetype
+    local global_fname = _QUICK_CODE_RUNNER_CONFIG.global_files[filetype]
+    if global_fname then
+      vim.cmd('split ' .. global_fname)
+    else
+      vim.notify(
+        'No global file for filetype ' .. filetype,
+        vim.log.levels.WARN,
+        { title = 'quick-code-runner.nvim' }
+      )
     end
   end, { nargs = '*', range = true })
 end
