@@ -122,7 +122,7 @@ AUTHOR                                         *quick-code-runner.nvim-author*
 👤 **Huynh Duc Dung**
 
 - Website: https://productsway.com/
-- Twitter: @jellydn <https://twitter.com/jellydn>
+- Twitter: **@jellydn** <https://twitter.com/jellydn>
 - Github: @jellydn <https://github.com/jellydn>
 
 
