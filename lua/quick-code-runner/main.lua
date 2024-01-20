@@ -115,7 +115,12 @@ function M.setup()
     if opts.range ~= 0 then
       run_selection(opts.fargs)
     else
-      vim.notify('No selection', vim.log.levels.WARN, { title = 'quick-code-runner.nvim' })
+      vim.notify(
+        'Execute global code block..',
+        vim.log.levels.INFO,
+        { title = 'quick-code-runner.nvim' }
+      )
+      run_lines({}, {})
     end
   end, { nargs = '*', range = true })
 
