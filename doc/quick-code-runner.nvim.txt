@@ -1,4 +1,4 @@
-*quick-code-runner.nvim.txt*    For NVIM v0.8.0   Last change: 2024 January 19
+*quick-code-runner.nvim.txt*    For NVIM v0.8.0   Last change: 2024 January 20
 
 ==============================================================================
 Table of Contents                   *quick-code-runner.nvim-table-of-contents*
@@ -27,13 +27,18 @@ INSTALL WITH LAZY.NVIM ~
         opts = {
           debug = true,
         },
-        cmd = "QuickCodeRunner",
+        cmd = { "QuickCodeRunner", "QuickCodePad" },
         keys = {
           {
             "<leader>cr",
             ":QuickCodeRunner<CR>",
             desc = "Quick Code Runner",
             mode = "v",
+          },
+          {
+            "<leader>cp",
+            ":QuickCodePad<CR>",
+            desc = "Quick Code Pad",
           },
         },
       }
