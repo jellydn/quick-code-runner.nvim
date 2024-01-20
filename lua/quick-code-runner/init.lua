@@ -2,12 +2,15 @@
 ---@param ext string
 ---@return string
 local function get_global_file_by_type(ext)
-  -- Create code-runner folder if not exists
-  if vim.fn.isdirectory(vim.fn.stdpath('state') .. '/code-runner') == 0 then
-    vim.fn.mkdir(vim.fn.stdpath('state') .. '/code-runner')
+  local state_path = vim.fn.stdpath('state')
+  local path = state_path .. '/code-runner'
+
+  -- Create code-runner folder if it does not exist
+  if vim.fn.isdirectory(path) == 0 then
+    vim.fn.mkdir(path)
   end
 
-  return string.format('%s/%s/code-pad.%s', vim.fn.stdpath('state'), 'code-runner', ext)
+  return string.format('%s/code-pad.%s', path, ext)
 end
 
 --- Default configuration for quick-code-runner.nvim
@@ -30,15 +33,17 @@ local default_config = {
     go = get_global_file_by_type('go'),
   },
 }
+
 --- Global configuration for entire plugin, easy to access from anywhere
 _QUICK_CODE_RUNNER_CONFIG = default_config
+
 local M = {}
 
 --- Setup quick-code-runner.nvim
----@param options (table | nil)
-function M.setup(options)
-  _QUICK_CODE_RUNNER_CONFIG =
-    vim.tbl_extend('force', _QUICK_CODE_RUNNER_CONFIG, options or default_config)
+---@param opts (table | nil)
+function M.setup(opts)
+  local options = opts or default_config
+  _QUICK_CODE_RUNNER_CONFIG = vim.tbl_extend('force', _QUICK_CODE_RUNNER_CONFIG, options)
 
   require('quick-code-runner.main').setup()
 end
