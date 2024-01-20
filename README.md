@@ -1,11 +1,18 @@
 <h1 align="center">Welcome to quick-code-runner.nvim 👋</h1>
 <p>
-  A simple and efficient code runner for Neovim.
+   Efficient Neovim plugin for running code quickly and simply.
 </p>
 
-## Usage
+## Features
 
-To use quick-code-runner.nvim, add the following configuration to your Neovim setup:
+- **Efficient Code Execution**: Run code snippets swiftly in Neovim.
+- **Support for Multiple Languages**: Currently supports JavaScript, TypeScript, Python, and Go.
+- **Easy Customization**: Configurable to suit your coding style and requirements.
+- **Simple Installation**: Quick setup with [lazy.nvim](https://github.com/folke/lazy.nvim).
+
+## Installation
+
+Add the following to your Neovim configuration to install `quick-code-runner.nvim`:
 
 ### Install with [lazy.nvim](https://github.com/folke/lazy.nvim)
 
@@ -35,7 +42,7 @@ To use quick-code-runner.nvim, add the following configuration to your Neovim se
 
 ## Configuration
 
-You can customize quick-code-runner.nvim by modifying the default configuration:
+Customize the plugin by modifying the default configuration. Example:
 
 ```lua
 --- Default configuration for quick-code-runner.nvim
@@ -54,7 +61,10 @@ local default_config = {
 }
 ```
 
-## Demo
+## Usage
+
+- **QuickCodePad**: A tool for writing code snippets in a floating window.
+- **QuickCodeRunner**: Run selected code snippets using `<leader>cr`.
 
 ### QuickCodePad
 
@@ -66,7 +76,7 @@ After closing the floating window, run `:QuickCodeRunner` to execute your code.
 
 ### Running Selected Code
 
-The "QuickCodeRunner" feature allows you to select a code snippet and run it with ease. You can invoke this feature using the keyboard shortcut `<leader>cr`.
+The `QuickCodeRunner` feature allows you to select a code snippet and run it with ease. You can invoke this feature using the keyboard shortcut `<leader>cr`.
 
 ![QuickCodeRunner](https://i.gyazo.com/f533084934265d331c7edca68e5d80dd.gif)
 
@@ -75,7 +85,7 @@ The "QuickCodeRunner" feature allows you to select a code snippet and run it wit
 
 ## Limitations
 
-Kindly be aware that quick-code-runner.nvim is presently configured to run only JavaScript (JS), TypeScript (TS), Go and Python at this time. Although it might function with other languages, we can't assure full compatibility or offer assistance for problems encountered when employing languages other than JS, TS, Go and Python.
+Currently optimized for JavaScript, TypeScript, Go, and Python. May work with other languages, but full compatibility is not guaranteed.
 
 ## Contributing
 
