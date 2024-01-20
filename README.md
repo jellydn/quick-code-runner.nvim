@@ -16,13 +16,18 @@ To use quick-code-runner.nvim, add the following configuration to your Neovim se
     opts = {
       debug = true,
     },
-    cmd = "QuickCodeRunner",
+    cmd = { "QuickCodeRunner", "QuickCodePad" },
     keys = {
       {
         "<leader>cr",
         ":QuickCodeRunner<CR>",
         desc = "Quick Code Runner",
         mode = "v",
+      },
+      {
+        "<leader>cp",
+        ":QuickCodePad<CR>",
+        desc = "Quick Code Pad",
       },
     },
   }
