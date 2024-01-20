@@ -123,7 +123,7 @@ function M.setup()
     local filetype = vim.bo.filetype
     local global_fname = _QUICK_CODE_RUNNER_CONFIG.global_files[filetype]
     if global_fname then
-      vim.cmd('split ' .. global_fname)
+      utils.open_code_pad(global_fname, filetype)
     else
       vim.notify(
         'No global file for filetype ' .. filetype,
