@@ -56,9 +56,22 @@ local default_config = {
 
 ## Demo
 
-Simple and user-friendly: choose your code snippet and invoke "QuickCodeRunner" by pressing `<leader>cr`, alternatively.
+### QuickCodePad
 
-[![Demo](https://i.gyazo.com/f9c040fda15afa2368c8bedd2ee0dc78.gif)](https://gyazo.com/f9c040fda15afa2368c8bedd2ee0dc78)
+The `QuickCodePad` is a tool designed for writing and running code snippets swiftly. It opens a floating window, providing a convenient environment for coding and testing.
+
+![QuickCodePad](https://i.gyazo.com/b6e553ecbf44af51121e67befe4ca0f2.gif)
+
+After closing the floating window, run `:QuickCodeRunner` to execute your code.
+
+### Running Selected Code
+
+The "QuickCodeRunner" feature allows you to select a code snippet and run it with ease. You can invoke this feature using the keyboard shortcut `<leader>cr`.
+
+![QuickCodeRunner](https://i.gyazo.com/f533084934265d331c7edca68e5d80dd.gif)
+
+> [!NOTE]
+> The global code block is always executed first, followed by the selected code.
 
 ## Limitations
 
