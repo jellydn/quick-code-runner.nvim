@@ -3,19 +3,28 @@
 ==============================================================================
 Table of Contents                   *quick-code-runner.nvim-table-of-contents*
 
-  - Usage                                       |quick-code-runner.nvim-usage|
+  - Features                                 |quick-code-runner.nvim-features|
+  - Installation                         |quick-code-runner.nvim-installation|
   - Configuration                       |quick-code-runner.nvim-configuration|
-  - Demo                                         |quick-code-runner.nvim-demo|
+  - Usage                                       |quick-code-runner.nvim-usage|
   - Limitations                           |quick-code-runner.nvim-limitations|
   - Contributing                         |quick-code-runner.nvim-contributing|
   - Credits                                   |quick-code-runner.nvim-credits|
   - Author                                     |quick-code-runner.nvim-author|
   - Show your support               |quick-code-runner.nvim-show-your-support|
-Welcome to quick-code-runner.nvim 👋A simple and efficient code runner for Neovim.
-USAGE                                           *quick-code-runner.nvim-usage*
+Welcome to quick-code-runner.nvim 👋Efficient Neovim plugin for running code quickly and simply.
+FEATURES                                     *quick-code-runner.nvim-features*
 
-To use quick-code-runner.nvim, add the following configuration to your Neovim
-setup:
+- **Efficient Code Execution**: Run code snippets swiftly in Neovim.
+- **Support for Multiple Languages**: Currently supports JavaScript, TypeScript, Python, and Go.
+- **Easy Customization**: Configurable to suit your coding style and requirements.
+- **Simple Installation**: Quick setup with lazy.nvim <https://github.com/folke/lazy.nvim>.
+
+
+INSTALLATION                             *quick-code-runner.nvim-installation*
+
+Add the following to your Neovim configuration to install
+`quick-code-runner.nvim`:
 
 
 INSTALL WITH LAZY.NVIM ~
@@ -47,8 +56,7 @@ INSTALL WITH LAZY.NVIM ~
 
 CONFIGURATION                           *quick-code-runner.nvim-configuration*
 
-You can customize quick-code-runner.nvim by modifying the default
-configuration:
+Customize the plugin by modifying the default configuration. Example:
 
 >lua
     --- Default configuration for quick-code-runner.nvim
@@ -68,7 +76,10 @@ configuration:
 <
 
 
-DEMO                                             *quick-code-runner.nvim-demo*
+USAGE                                           *quick-code-runner.nvim-usage*
+
+- **QuickCodePad**: A tool for writing code snippets in a floating window.
+- **QuickCodeRunner**: Run selected code snippets using `<leader>cr`.
 
 
 QUICKCODEPAD ~
@@ -82,7 +93,7 @@ After closing the floating window, run `:QuickCodeRunner` to execute your code.
 
 RUNNING SELECTED CODE ~
 
-The "QuickCodeRunner" feature allows you to select a code snippet and run it
+The `QuickCodeRunner` feature allows you to select a code snippet and run it
 with ease. You can invoke this feature using the keyboard shortcut
 `<leader>cr`.
 
@@ -92,11 +103,8 @@ with ease. You can invoke this feature using the keyboard shortcut
 
 LIMITATIONS                               *quick-code-runner.nvim-limitations*
 
-Kindly be aware that quick-code-runner.nvim is presently configured to run only
-JavaScript (JS), TypeScript (TS), Go and Python at this time. Although it might
-function with other languages, we can’t assure full compatibility or offer
-assistance for problems encountered when employing languages other than JS, TS,
-Go and Python.
+Currently optimized for JavaScript, TypeScript, Go, and Python. May work with
+other languages, but full compatibility is not guaranteed.
 
 
 CONTRIBUTING                             *quick-code-runner.nvim-contributing*
