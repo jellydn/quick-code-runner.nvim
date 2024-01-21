@@ -1,4 +1,4 @@
-*quick-code-runner.nvim.txt*    For NVIM v0.8.0   Last change: 2024 January 21
+*quick-code-runner.nvim.txt*    For NVIM v0.8.0   Last change: 2024 January 21 and add YouTube link to "Welcome" section
 
 ==============================================================================
 Table of Contents                   *quick-code-runner.nvim-table-of-contents*
@@ -12,7 +12,7 @@ Table of Contents                   *quick-code-runner.nvim-table-of-contents*
   - Credits                                   |quick-code-runner.nvim-credits|
   - Author                                     |quick-code-runner.nvim-author|
   - Show your support               |quick-code-runner.nvim-show-your-support|
-Welcome to quick-code-runner.nvim 👋Efficient Neovim plugin for running code quickly and simply.<https://www.youtube.com/watch?v=Pz9TZ6AZ1pU>
+Welcome to quick-code-runner.nvim 👋Efficient Neovim plugin for running code quickly and simply. <https://www.youtube.com/watch?v=Pz9TZ6AZ1pU><https://www.youtube.com/watch?v=Pz9TZ6AZ1pU>
 
 
 FEATURES                                     *quick-code-runner.nvim-features*
