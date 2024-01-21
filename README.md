@@ -3,6 +3,8 @@
    Efficient Neovim plugin for running code quickly and simply.
 </p>
 
+[![IT Man - Introducing quick-code-runner.nvim - A simple and efficient code runner for Neovim](https://i.ytimg.com/vi/Pz9TZ6AZ1pU/hqdefault.jpg)](https://www.youtube.com/watch?v=Pz9TZ6AZ1pU)
+
 ## Features
 
 - **Efficient Code Execution**: Run code snippets swiftly in Neovim.
