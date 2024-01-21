@@ -27,8 +27,6 @@ INSTALLATION                             *quick-code-runner.nvim-installation*
 
 Add the following to your Neovim configuration to install
 `quick-code-runner.nvim`:
-
-
 INSTALL WITH LAZY.NVIM ~
 
 >lua
@@ -107,8 +105,6 @@ LIMITATIONS                               *quick-code-runner.nvim-limitations*
 
 Currently optimized for JavaScript, TypeScript, Go, and Python. May work with
 other languages, but full compatibility is not guaranteed.
-
-
 CONTRIBUTING                             *quick-code-runner.nvim-contributing*
 
 If you wish to support more languages, feel free to open a Pull Request. We
