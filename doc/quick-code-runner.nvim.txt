@@ -129,7 +129,7 @@ and efficient alternative.
 
 AUTHOR                                         *quick-code-runner.nvim-author*
 
-👤 **Huynh Duc Dung**
+- Author: Huynh Duc Dung
 
 - Website: https://productsway.com/
 - Twitter: @jellydn <https://twitter.com/jellydn>
