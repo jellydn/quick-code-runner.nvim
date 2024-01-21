@@ -12,7 +12,7 @@ Table of Contents                   *quick-code-runner.nvim-table-of-contents*
   - Credits                                   |quick-code-runner.nvim-credits|
   - Author                                     |quick-code-runner.nvim-author|
   - Show your support               |quick-code-runner.nvim-show-your-support|
-Welcome to quick-code-runner.nvim 👋Efficient Neovim plugin for running code quickly and simply.<https://www.youtube.com/watch?v=Pz9TZ6AZ1pU>
+Welcome to quick-code-runner.nvim 👋Efficient Neovim plugin for running code quickly and simply.<https://www.youtube.com/watch?v=new_video_link>
 
 
 FEATURES                                     *quick-code-runner.nvim-features*
