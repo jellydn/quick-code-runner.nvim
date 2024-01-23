@@ -4,29 +4,29 @@ local start = vim.health.start or vim.health.report_start
 local ok = vim.health.ok or vim.health.report_ok
 local warn = vim.health.warn or vim.health.report_warn
 
+--- Find and check if an executable is present
+---@param executable string
+---@param version_option string
+local function check_executable(executable, version_option)
+  local is_present = vim.fn.executable(executable)
+  if is_present == 0 then
+    warn(executable .. ' not found')
+  else
+    local success, version = pcall(vim.fn.system, executable .. ' ' .. version_option)
+    if success then
+      ok(executable .. ' found, version: ' .. version)
+    else
+      warn('Failed to get version of ' .. executable)
+    end
+  end
+end
+
 -- Add health check for bun, go and python3
 function M.check()
   start('quick-code-runner.nvim health check')
-  local bun = vim.fn.executable('bun')
-  if bun == 0 then
-    warn('bun not found')
-  else
-    ok('bun found')
-  end
-
-  local go = vim.fn.executable('go')
-  if go == 0 then
-    warn('go not found')
-  else
-    ok('go found')
-  end
-
-  local python3 = vim.fn.executable('python3')
-  if python3 == 0 then
-    warn('python3 not found')
-  else
-    ok('python3 found')
-  end
+  check_executable('bun', '--version')
+  check_executable('go', 'version')
+  check_executable('python3', '--version')
 end
 
 return M
