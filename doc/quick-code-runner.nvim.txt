@@ -1,4 +1,4 @@
-*quick-code-runner.nvim.txt*    For NVIM v0.8.0   Last change: 2024 January 23
+*quick-code-runner.nvim.txt*    For NVIM v0.8.0   Last change: 2024 January 29
 
 ==============================================================================
 Table of Contents                   *quick-code-runner.nvim-table-of-contents*
@@ -10,6 +10,7 @@ Table of Contents                   *quick-code-runner.nvim-table-of-contents*
   - Limitations                           |quick-code-runner.nvim-limitations|
   - Contributing                         |quick-code-runner.nvim-contributing|
   - Credits                                   |quick-code-runner.nvim-credits|
+  - Alternative solutions       |quick-code-runner.nvim-alternative-solutions|
   - Author                                     |quick-code-runner.nvim-author|
   - Show your support               |quick-code-runner.nvim-show-your-support|
 Welcome to quick-code-runner.nvim 👋Efficient Neovim plugin for running code quickly and simply.<https://www.youtube.com/watch?v=Pz9TZ6AZ1pU>
@@ -115,16 +116,22 @@ If you wish to support more languages, feel free to open a Pull Request. We
 appreciate any contributions to expand the capabilities of
 quick-code-runner.nvim.
 
-Alternatively, if you need to run code in a language not currently supported by
-quick-code-runner.nvim, you may consider using code_runner.nvim
-<https://github.com/CRAG666/code_runner.nvim>.
-
 
 CREDITS                                       *quick-code-runner.nvim-credits*
 
 Drawing inspiration from the feature-rich code_runner.nvim
 <https://github.com/CRAG666/code_runner.nvim>, I aim to create a more simple
 and efficient alternative.
+
+
+ALTERNATIVE SOLUTIONS           *quick-code-runner.nvim-alternative-solutions*
+
+While quick-code-runner.nvim offers an efficient and simple way to run code in
+Neovim, other plugins might cater to different requirements or preferences.
+Here are a few noteworthy alternatives:
+
+- CRAG666/code_runner.nvim <https://github.com/CRAG666/code_runner.nvim>
+- LintaoAmons/scratch.nvim <https://github.com/LintaoAmons/scratch.nvim>
 
 
 AUTHOR                                         *quick-code-runner.nvim-author*
