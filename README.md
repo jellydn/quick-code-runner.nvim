@@ -93,11 +93,16 @@ Currently optimized for JavaScript, TypeScript, Go, and Python. May work with ot
 
 If you wish to support more languages, feel free to open a Pull Request. We appreciate any contributions to expand the capabilities of quick-code-runner.nvim.
 
-Alternatively, if you need to run code in a language not currently supported by quick-code-runner.nvim, you may consider using [code_runner.nvim](https://github.com/CRAG666/code_runner.nvim).
-
 ## Credits
 
 Drawing inspiration from the feature-rich [code_runner.nvim](https://github.com/CRAG666/code_runner.nvim), I aim to create a more simple and efficient alternative.
+
+## Alternative solutions
+
+While quick-code-runner.nvim offers an efficient and simple way to run code in Neovim, other plugins might cater to different requirements or preferences. Here are a few noteworthy alternatives:
+
+- [CRAG666/code_runner.nvim](https://github.com/CRAG666/code_runner.nvim)
+- [LintaoAmons/scratch.nvim](https://github.com/LintaoAmons/scratch.nvim)
 
 ## Author
 
