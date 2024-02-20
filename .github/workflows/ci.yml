@@ -13,6 +13,11 @@ jobs:
           token: ${{ secrets.GH_VIMDOC_TOKEN }}
           version: latest
           args: --check .
+        uses: JohnnyMorganz/stylua-action@v4
+        with:
+          token: ${{ secrets.GH_VIMDOC_TOKEN }}
+          version: latest
+          args: --check .
 
   docs:
     runs-on: ubuntu-latest
