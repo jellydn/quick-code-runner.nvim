@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to quick-code-runner.nvim 👋</h1>
 <p>
-   Efficient Neovim plugin for running code quickly and simply.
+      Efficient Neovim plugin for running code quickly and simply.
 </p>
 
 [![IT Man - Introducing quick-code-runner.nvim - A simple and efficient code runner for Neovim](https://i.ytimg.com/vi/Pz9TZ6AZ1pU/hqdefault.jpg)](https://www.youtube.com/watch?v=Pz9TZ6AZ1pU)
@@ -78,7 +78,7 @@ After closing the floating window, run `:QuickCodeRunner` to execute your code.
 
 This feature is particularly useful when you need a quick, isolated environment for writing and testing code, which you can then run the code by press `Enter`:
 
-[![Run code](https://i.gyazo.com/48c19c3fb6cb42993732082c6628aa1c.gif)](https://gyazo.com/48c19c3fb6cb42993732082c6628aa1c)
+        [![Run code](https://i.gyazo.com/48c19c3fb6cb42993732082c6628aa1c.gif)](https://gyazo.com/48c19c3fb6cb42993732082c6628aa1c)
 
 ### Running Selected Code
 
