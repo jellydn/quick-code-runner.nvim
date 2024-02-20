@@ -70,24 +70,26 @@ local default_config = {
 
 ### QuickCodePad
 
-The `QuickCodePad` is a tool designed for writing and running code snippets swiftly. It opens a floating window, providing a convenient environment for coding and testing.
+		-- The `QuickCodePad` is a tool designed for writing and running code snippets swiftly. It opens a floating window, providing a convenient environment for coding and testing. This feature enhances the writing and testing experience by providing a dedicated environment for creating and executing code snippets.
+		
 
-![QuickCodePad](https://i.gyazo.com/b6e553ecbf44af51121e67befe4ca0f2.gif)
+		-- ![QuickCodePad](https://i.gyazo.com/b6e553ecbf44af51121e67befe4ca0f2.gif) This GIF demonstrates how the `QuickCodePad` opens a floating window, providing a convenient environment for writing and testing code.
+		
 
-After closing the floating window, run `:QuickCodeRunner` to execute your code.
+-- After closing the floating window, run `:QuickCodeRunner` to execute your code. This feature allows for seamless execution of the written code with the `QuickCodeRunner` command.
 
-This feature is particularly useful when you need a quick, isolated environment for writing and testing code, which you can then run the code by press `Enter`:
+-- This feature is particularly useful when you need a quick, isolated environment for writing and testing code, which you can then run the code by pressing `Enter`. It streamlines the process of writing, testing, and running code snippets.:
 
 [![Run code](https://i.gyazo.com/48c19c3fb6cb42993732082c6628aa1c.gif)](https://gyazo.com/48c19c3fb6cb42993732082c6628aa1c)
 
 ### Running Selected Code
 
-The `QuickCodeRunner` feature allows you to select a code snippet and run it with ease. You can invoke this feature using the keyboard shortcut `<leader>cr`.
+-- The `QuickCodeRunner` feature allows you to select a code snippet and run it with ease. You can invoke this feature using the keyboard shortcut `<leader>cr`. It simplifies the process of selecting and executing code snippets.
 
 ![QuickCodeRunner](https://i.gyazo.com/f533084934265d331c7edca68e5d80dd.gif)
 
-> [!NOTE]
-> The global code block is always executed first, followed by the selected code.
+-- > [!NOTE]
+-- > The global code block is always executed first, followed by the selected code.
 
 ## Limitations
 
