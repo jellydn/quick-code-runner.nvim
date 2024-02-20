@@ -1,4 +1,4 @@
-local M = {}
+local visual_selection = {}
 
 local log = require('quick-code-runner.vlog')
 
