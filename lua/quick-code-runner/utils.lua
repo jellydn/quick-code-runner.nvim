@@ -11,7 +11,7 @@ local filetype_to_extension = {
 
 --- Get visual selection
 ---@return string[]
-M.get_visual_selection = function()
+M.get_visual_lines = function()
   local s_start = vim.fn.getpos("'<")
   local s_end = vim.fn.getpos("'>")
   local n_lines = math.abs(s_end[2] - s_start[2]) + 1
@@ -29,7 +29,7 @@ end
 ---@param content any
 ---@param filetype string
 ---@return string|nil
-M.create_tmp_file = function(content, filetype)
+M.create_temporary_file = function(content, filetype)
   -- create temp file base on pid and datetime
   local tmp_file = string.format(
     '%s/%s.%s',
@@ -62,14 +62,14 @@ end
 ---@param cmd string The command name
 ---@param func function The function to execute
 ---@param opt table The options
-M.create_cmd = function(cmd, func, opt)
+M.register_custom_command = function(cmd, func, opt)
   opt = vim.tbl_extend('force', { desc = 'quick-code-runner.nvim ' .. cmd }, opt or {})
   vim.api.nvim_create_user_command(cmd, func, opt)
 end
 
 --- Show output in a split view
 ---@param output string|nil The output to display
-M.show_output_in_split = function(output)
+M.display_output_in_split_view = function(output)
   local Popup = require('nui.popup')
   local event = require('nui.utils.autocmd').event
 
@@ -117,7 +117,7 @@ end
 --- Open code pad with the given file path
 ---@param file_path string
 ---@param filetype string
-M.open_code_pad = function(file_path, filetype)
+M.open_code_editor = function(file_path, filetype)
   local Popup = require('nui.popup')
   local container = Popup({
     enter = true,
@@ -191,7 +191,7 @@ end
 --- Create a temporary file with the lines to run
 ---@param lines string[]
 ---@param opts table The options
-function M.run_lines(lines, opts)
+function M.execute_selected_lines(lines, opts)
   -- Create a temporary file with the lines to run
   local filetype = vim.bo.filetype
 
