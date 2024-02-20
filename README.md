@@ -78,7 +78,7 @@ After closing the floating window, run `:QuickCodeRunner` to execute your code.
 
 This feature is particularly useful when you need a quick, isolated environment for writing and testing code, which you can then run the code by press `Enter`:
 
-        [![Run code](https://i.gyazo.com/48c19c3fb6cb42993732082c6628aa1c.gif)](https://gyazo.com/48c19c3fb6cb42993732082c6628aa1c)
+![Run code](https://i.gyazo.com/48c19c3fb6cb42993732082c6628aa1c).gif)
 
 ### Running Selected Code
 
