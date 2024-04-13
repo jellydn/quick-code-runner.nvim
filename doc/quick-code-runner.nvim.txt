@@ -1,4 +1,4 @@
-*quick-code-runner.nvim.txt*   For NVIM v0.8.0   Last change: 2024 February 20
+*quick-code-runner.nvim.txt*     For NVIM v0.8.0    Last change: 2024 April 13
 
 ==============================================================================
 Table of Contents                   *quick-code-runner.nvim-table-of-contents*
@@ -13,6 +13,7 @@ Table of Contents                   *quick-code-runner.nvim-table-of-contents*
   - Alternative solutions       |quick-code-runner.nvim-alternative-solutions|
   - Author                                     |quick-code-runner.nvim-author|
   - Show your support               |quick-code-runner.nvim-show-your-support|
+1. Links                                        |quick-code-runner.nvim-links|
 Welcome to quick-code-runner.nvim 👋Efficient Neovim plugin for running code quickly and simply.<https://www.youtube.com/watch?v=Pz9TZ6AZ1pU>
 
 
