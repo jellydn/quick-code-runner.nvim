@@ -25,12 +25,16 @@ local default_config = {
     go = {
       'go run',
     },
+    lua = {
+      'lua',
+    },
   },
   global_files = {
     javascript = get_global_file_by_type('js'),
     typescript = get_global_file_by_type('ts'),
     python = get_global_file_by_type('py'),
     go = get_global_file_by_type('go'),
+    lua = get_global_file_by_type('lua'),
   },
 }
 
