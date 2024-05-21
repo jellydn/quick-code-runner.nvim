@@ -93,6 +93,19 @@ The `QuickCodeRunner` feature allows you to select a code snippet and run it wit
 
 Currently optimized for JavaScript, TypeScript, Go, and Python. May work with other languages, but full compatibility is not guaranteed.
 
+## Tips
+
+- Run `:QuickCodeRunner` to execute the current file. Credits to [@al1-ce](https://github.com/jellydn/quick-code-runner.nvim/issues/33)
+
+```lua
+{
+    "<leader>cr",
+    "gg0vGg$:QuickCodeRunner<CR>",
+    desc = "Quick File Code Runner",
+    mode = "n",
+}
+```
+
 ## Contributing
 
 If you wish to support more languages, feel free to open a Pull Request. We appreciate any contributions to expand the capabilities of quick-code-runner.nvim.
