@@ -7,10 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Stylua
         uses: JohnnyMorganz/stylua-action@v4
         with:
-          token: ${{ secrets.GH_VIMDOC_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           version: latest
           args: --check .
 
@@ -21,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_VIMDOC_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: panvimdoc
         uses: kdheepak/panvimdoc@main
         with:
@@ -41,6 +43,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       - uses: rhysd/action-setup-vim@v1
         id: vim
         with:
@@ -50,7 +54,7 @@ jobs:
       - name: luajit
         uses: leafo/gh-actions-lua@v10
         with:
-          luaVersion: "luajit-2.1.0-beta3"
+          luaVersion: "luajit-openresty"
 
       - name: luarocks
         uses: leafo/gh-actions-luarocks@v4
