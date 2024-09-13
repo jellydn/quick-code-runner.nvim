@@ -44,7 +44,7 @@ Add the following to your Neovim configuration to install `quick-code-runner.nvi
 
 ## Configuration
 
-Customize the plugin by modifying the default configuration. Example:
+Customize the plugin by modifying the default [configuration](./lua/quick-code-runner/init.lua#L17). Example:
 
 ```lua
 --- Default configuration for quick-code-runner.nvim

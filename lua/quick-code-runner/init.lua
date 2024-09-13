@@ -36,6 +36,13 @@ local default_config = {
     go = get_global_file_by_type('go'),
     lua = get_global_file_by_type('lua'),
   },
+  -- Center the code pad
+  position = '50%',
+  -- Default size of the code pad
+  size = {
+    width = '50%',
+    height = '50%',
+  },
 }
 
 --- Global configuration for entire plugin, easy to access from anywhere

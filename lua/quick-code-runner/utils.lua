@@ -85,11 +85,8 @@ M.show_output_in_split = function(output)
         bottom_align = 'left',
       },
     },
-    position = '50%',
-    size = {
-      width = '50%',
-      height = '50%',
-    },
+    position = _QUICK_CODE_RUNNER_CONFIG.position,
+    size = _QUICK_CODE_RUNNER_CONFIG.size,
   })
 
   -- mount/open the component
@@ -122,11 +119,8 @@ M.open_code_pad = function(file_path, filetype)
   local container = Popup({
     enter = true,
     focusable = true,
-    position = '50%',
-    size = {
-      width = '50%',
-      height = '50%',
-    },
+    position = _QUICK_CODE_RUNNER_CONFIG.position,
+    size = _QUICK_CODE_RUNNER_CONFIG.size,
     buf_options = {
       filetype = filetype,
     },
