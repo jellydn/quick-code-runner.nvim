@@ -1,4 +1,4 @@
-*quick-code-runner.nvim.txt*     For NVIM v0.8.0    Last change: 2025 March 25
+*quick-code-runner.nvim.txt*     For NVIM v0.8.0     Last change: 2025 June 09
 
 ==============================================================================
 Table of Contents                   *quick-code-runner.nvim-table-of-contents*
